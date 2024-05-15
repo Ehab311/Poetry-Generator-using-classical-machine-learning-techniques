@@ -1,22 +1,37 @@
-# Poetry-Generator-using-classical-machine-learning-techniques
-
-Welcome to the Poetry Generator repository! This project utilizes classical machine learning techniques to generate poetry based on input text data from various poets.
+# Poetry Generation System
 
 ## Overview
-This repository contains Python code that reads poetry text from files in a specified directory, processes the text data, builds a Markov chain model to predict word transitions, and generates new poetry based on user input.
 
-## Requirements
-To run the code in this repository, you need to have the following libraries installed:
+This repository contains code for generating poetry using Markov chains and Bayesian networks. The system analyzes a collection of poetry texts, learns the patterns of word transitions, and then generates new poetry based on those patterns.
 
-pandas
-numpy
-seaborn
-matplotlib
-nltk
-You can install these libraries using pip:
+## Code Files
+
+- `poetry_generation.py`: Python script containing the main code for generating poetry using Markov chains and Bayesian networks.
+- `requirements.txt`: Text file listing all the dependencies required to run the code.
+
 ## Usage
-Clone the repository to your local machine.
-Navigate to the repository directory.
-Run the poetry_generator.py script.
-Follow the prompts to enter the first word for the poem and the desired poem length.
-Enjoy the generated poem!
+
+1. **Clone the Repository**: Clone this repository to your local machine using the following command:
+    ```
+    git clone <repository_url>
+    ```
+
+2. **Install Dependencies**: Navigate to the project directory and install the required dependencies using pip:
+    ```
+    cd poetry-generation
+    pip install -r requirements.txt
+    ```
+
+3. **Run the Code**: Execute the `poetry_generation.py` script to generate poetry. Follow the prompts to specify the first word(s) of the poem and the desired length.
+
+## Features
+
+- **Markov Chain Poetry Generation**: The system uses a Markov chain to model the probabilities of word transitions in poetry texts. It then generates new poetry by sampling from these probabilities.
+- **Bayesian Network Poetry Generation**: Additionally, the system employs a Bayesian network to capture more complex dependencies between words. It learns from the poetry corpus and generates new poems based on these learned dependencies.
+- **Poet Style Generation**: The generated poems attempt to mimic the style of the poets in the training corpus by following specific line structures.
+  
+## Example
+
+```bash
+# Run the poetry generation system
+python poetry_generation.py
